@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相册首页</title>
+    <style>
+        ul{
+            background-color: #333;
+        }
+        li{
+            list-style: none;
+            display: inline-block;
+        }
+        li a{
+            display: inline-block;
+            width: 100px; 
+            height: 50px;
+            text-decoration: none;
+            padding-top: 10px;
+        }
+        .all,.upload{
+            display:inline-block;
+            width: 100px; 
+            height: 50px;
+            background-color: pink;
+            text-align: center;
+        
+        }
+
+        .lol,.web,.pics{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+
+        <li class="all"> <a href="#">全部相册</a> </li>
+        <li class="upload"> <a href="./upload.ejs">上传</a> </li>
+    </ul>
+
+    <div class="">
+            <% for(let i=0;i<ops.length;i++){ %>
+                <!-- <option value=""><%=ops[i]%></option>  -->
+                <a href="./<%=ops[i]%>.ejs"><span class="pics"><%=ops[i]%></span> </a>
+            <% } %>
+        <!-- <span class="lol">LOL</span>
+        <span class="web">Web</span> -->
+    </div>
+   
+</body>
+</html>

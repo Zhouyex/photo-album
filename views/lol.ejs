@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOL相册</title>
+    <style>
+         ul{
+            background-color: #333;
+        }
+        li{
+            list-style: none;
+            display: inline-block;
+        }
+        li a{
+            display: inline-block;
+            width: 100px; 
+            height: 50px;
+            text-decoration: none;
+            padding-top: 10px;
+        }
+        .all,.upload{
+            display:inline-block;
+            width: 100px; 
+            height: 50px;
+            background-color: pink;
+            text-align: center;
+        
+        }
+        li{
+            list-style: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>lol相册</h1>
+    <ul>
+        <li class="all"> <a href="index.ejs">全部相册</a> </li>
+        <li class="upload"> <a href="./upload.ejs">上传</a> </li>
+    </ul>
+    <ul>
+        <% for(var i=0;i<imgs.length;i++){ %>
+        <li>
+            <img src="/lol/<%= imgs[i] %>" alt="pic" width="100px">
+        </li>
+        <% } %>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上传图片</title>
+</head>
+<body>
+    <h1>上传相册</h1>
+    <form action="#" method="POST" enctype="multipart/form-data">  
+        <div>请选择文件夹</div>
+        <select name="op" id="">
+            <% for(let i=0;i<ops.length;i++){ %>
+            <option value="<%=ops[i]%>" name="<%=ops[i]%>"><%=ops[i]%></option>
+            <% } %>
+            <!-- <option value="">Web前端Web</option> -->
+        </select>
+
+        <br>
+        <br>
+        <br>
+        <div>请选择上传文件</div>
+        <div><input type="file" name="pic"></div>
+        <input type="submit" value="上传">
+    </form>
+</body>
+</html>
